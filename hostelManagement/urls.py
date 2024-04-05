@@ -18,9 +18,19 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    path('hostel/', include('hostel.urls')),
+    path('', include('hostel.urls')),
     path('admin/', admin.site.urls),
-    path('signup/', include('users.urls')),
-]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    
+    path('signup/', auth_views.LoginView.as_view(
+        template_name='users/signup.html'), name='sign_up'),
+        
+        
+    path('signin/', auth_views.LoginView.as_view(
+        template_name='users/signin.html'), name='sign_in'),
+        
+    path('signout/', auth_views.LogoutView.as_view(
+        template_name='users/signout.html'), name='sign_out'),
+]

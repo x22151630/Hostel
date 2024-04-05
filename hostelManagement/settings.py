@@ -30,7 +30,7 @@ DEBUG = True
 CSRF_TRUSTED_ORIGINS = ['https://e4252c87dc614614a869b71ba996ef6a.vfs.cloud9.eu-west-1.amazonaws.com']
 ALLOWED_HOSTS = ['e4252c87dc614614a869b71ba996ef6a.vfs.cloud9.eu-west-1.amazonaws.com']
 
-
+LOGIN_REDIRECT_URL = '/'
 # Application definition
 
 INSTALLED_APPS = [

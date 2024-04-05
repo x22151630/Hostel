@@ -9,7 +9,7 @@
 <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
   <h3 class="w3-bar-item">Home</h3>
   <a href="admin/" class="w3-bar-item w3-button">Admin</a>
-  <a href="" class="w3-bar-item w3-button">Sign up</a>
+  <a href="/signup" class="w3-bar-item w3-button">Sign up</a>
  
 </div>
 
@@ -21,71 +21,22 @@
 </div>
 
 <div class="w3-row-padding w3-margin-top">
+  
+  {% for hostel in services_hostel  %}
   <div class="w3-third">
     <div class="w3-card">
-      <img src="#" style="width:100%">
+      <img src="{{hostel.image}}" style="width:100%">
       <div class="w3-container">
-        <h5>Furnished Room</h5>
-        <p>Comfortable and Hygienic Rooms Provided</p>
+        <h5>{{hostel.title}}</h5>
+        <p>{{hostel.service_info}}</p>
       </div>
     </div>
   </div>
+  {% endfor %}
 
-  <div class="w3-third">
-    <div class="w3-card">
-      <img src="#" style="width:100%">
-      <div class="w3-container">
-        <h5>WIFI</h5>
-        <p>Free WIFI access to the student who enroll</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="w3-third">
-    <div class="w3-card">
-      <img src="#" style="width:100%">
-      <div class="w3-container">
-        <h5>Canteen</h5>
-        <p>All meeals and kitche access is provided with maintaning hygiene</p>
-      </div>
-    </div>
-  </div>
 </div>
 
-<div class="w3-row-padding w3-margin-top">
-  <div class="w3-third">
-    <div class="w3-card">
-      <img src="#" style="width:100%">
-      <div class="w3-container">
-        <h5>Gym</h5>
-        <p>Fully equiped machines are provided</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="w3-third">
-    <div class="w3-card">
-      <img src="#" style="width:100%">
-      <div class="w3-container">
-        <h5>Housekeeping</h5>
-        <p> Housing cleaning and loundry is included</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="w3-third">
-    <div class="w3-card">
-      <img src="#" style="width:100%">
-      <div class="w3-container">
-        <h5>Library</h5>
-        <p> Reading area is a peacefull place to work within</p>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-
-<div class="w3-light-grey w3-padding-large w3-padding-32 w3-margin-top" style="margin-left:25%" id="contact">
+<div class="w3-light-grey w3-padding-large w3-padding-32 w3-margin-top" id="contact">
     <h3 class="w3-center">Register for Enquiry</h3>
     <hr>
     <p></p>
@@ -99,10 +50,7 @@
         <label>Email</label>
         <input class="w3-input w3-border" type="text" required name="Email">
       </div>
-      <div class="w3-section">
-        <label>Message</label>
-        <input class="w3-input w3-border" required name="Message">
-      </div>
+      
       <button type="submit" class="w3-button w3-block w3-dark-grey">Register</button>
     </form><br>
     

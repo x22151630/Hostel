@@ -3,4 +3,7 @@ from .models import Hostel
 
 # Create your views here.
 def index(request):
-    return render(request, "hostel/index.html")
+    services_hostel = Hostel.objects.all()
+    context = {'services_hostel': services_hostel}
+    print(context)
+    return render(request, "hostel/index.html", context)
