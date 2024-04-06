@@ -45,8 +45,9 @@ hr {
   margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
+  width: 300px;
   opacity: 0.9;
+  
 }
 
 .registerbtn:hover {
@@ -75,7 +76,7 @@ a {
 <body>
 
 
-<form action="/action_page.php">
+<form action="/action_page.php" method="POST">
   <div class="container">
   	<h1> Welcome to the Hostel Management Portal</h1>
     
@@ -94,8 +95,9 @@ a {
     <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
     <hr>
     
-
-    <button src="hostel/index" type="submit" class="registerbtn">Register</button>
+    <div. class="container registerbtn">
+    <a type="submit" class="registerbtn" href="hostel/index"> Register</a>
+    </div>
     <div class="container admin">
     <a class="registerbtn" href="/admin">Admin</a>
     </div>
