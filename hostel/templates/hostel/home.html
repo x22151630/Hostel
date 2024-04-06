@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -73,11 +73,14 @@ a {
 </style>
 </head>
 <body>
+
+
+<form action="/action_page.php">
+  <div class="container">
+  	<h1> Welcome to the Hostel Management Portal</h1>
     
-<form action="/action_page.php" method="POST">
-{% csrf_token %}
-{{ form.as_p }}
-<div class="container">
+	<h3>Register an account to visit the website</h3>
+    
     <hr>
   	
   	
@@ -86,16 +89,24 @@ a {
 
     <label for="psw"><b>Password</b></label>
     <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
     <hr>
     
-    
-    <button type="submit" href="hostel/index">Sign In</button>
-</div>
-<p></p>
-<div>
-    If you don't have an account yet
-    <a href="{% url 'users:sign_up' %}">Sign Up</a>
-</div>
+
+    <button src="hostel/index" type="submit" class="registerbtn">Register</button>
+    <div class="container admin">
+    <a class="registerbtn" href="/admin">Admin</a>
+    </div>
+  </div>
+  
+  
+  
+  <div class="container signin">
+    <p>Already have an account? <a href="/signin">Sign in</a>.</p>
+  </div>
 </form>
-
-
+	
+</body>
+</html>

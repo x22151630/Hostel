@@ -6,4 +6,4 @@ def index(request):
     services_hostel = Hostel.objects.all()
     context = {'services_hostel': services_hostel}
     print(context)
-    return render(request, "hostel/index.html", context)
+    return render(request, "hostel/home.html", context)
