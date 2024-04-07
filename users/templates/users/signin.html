@@ -76,7 +76,7 @@ a {
     
 <form action="/action_page.php" method="POST">
 {% csrf_token %}
-{{ form.as_p }}
+<!--{{ form.as_p }}-->
 <div class="container">
     <hr>
   	
@@ -89,13 +89,10 @@ a {
     <hr>
     
     
-    <button type="submit" href="hostel/index">Sign In</button>
+    <a type="submit" href="/index">Sign In</a>
 </div>
 <p></p>
-<div>
-    If you don't have an account yet
-    <a href="{% url 'users:sign_up' %}">Sign Up</a>
-</div>
+
 </form>
 
 

@@ -28,6 +28,8 @@ urlpatterns = [
         template_name='users/signup.html'), name='sign_up'),
         
         
+    path('users/', include('users.urls', namespace='users')),    
+        
     path('signin/', auth_views.LoginView.as_view(
         template_name='users/signin.html'), name='sign_in'),
         
