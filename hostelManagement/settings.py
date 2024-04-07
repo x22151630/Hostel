@@ -27,8 +27,8 @@ SECRET_KEY = 'django-insecure-ei=0^^6p#11&890ect@mf%^qr6$^*z$mz56a%wnsr)y3%6%%x&
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-CSRF_TRUSTED_ORIGINS = ['https://e4252c87dc614614a869b71ba996ef6a.vfs.cloud9.eu-west-1.amazonaws.com']
-ALLOWED_HOSTS = ['e4252c87dc614614a869b71ba996ef6a.vfs.cloud9.eu-west-1.amazonaws.com']
+CSRF_TRUSTED_ORIGINS = ['https://x22151630-hostel-app-env.eba-f5r6kisi.eu-west-1.elasticbeanstalk.com','https://e4252c87dc614614a869b71ba996ef6a.vfs.cloud9.eu-west-1.amazonaws.com']
+ALLOWED_HOSTS = ['x22151630-hostel-app-env.eba-f5r6kisi.eu-west-1.elasticbeanstalk.com','e4252c87dc614614a869b71ba996ef6a.vfs.cloud9.eu-west-1.amazonaws.com']
 
 LOGIN_REDIRECT_URL = '/'
 # Application definition
