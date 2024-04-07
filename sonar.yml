@@ -1,10 +1,11 @@
 version: 0.2
 env:
   secrets-manager:
-    SONARCLOUD_TOKEN: hostel@1234:sonartoken
-    SONARCLOUD_ORG: hostel@1234:Organization
-    PROJECTKEY: hostel@1234:Project
-    HOST: hostel@1234:HOST
+    SONARCLOUD_TOKEN: hostel-secret:sonartoken
+    SONARCLOUD_ORG: hostel-secret:Organization
+    PROJECTKEY: hostel-secret:Project
+    HOST: hostel-secret:HOST
+    
 phases:
   install:
     runtime-versions:
