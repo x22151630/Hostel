@@ -37,4 +37,4 @@ urlpatterns = [
         template_name='users/signout.html'), name='sign_out'),
         
         
-]
+] +static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
